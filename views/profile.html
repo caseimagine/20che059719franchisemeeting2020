@@ -10,7 +10,7 @@
 
 <form name="userForm" ng-submit="submitForm(userForm.$valid)" ng-if="titular">
     <fieldset ng-repeat="atribuido in formulario.lists['Campos definidos'] | groupBy:'atribuicao'" ng-disabled="disableFields()">
-
+<!-- 
         <h3>
             {{atribuido[0].atribuicao | translate}}
             <div class="togglebutton" ng-if="atribuido[0].atribuicao === 'Acompanhante'">
@@ -19,7 +19,7 @@
                     <input type="checkbox" checked="" ng-model="titular.Wave" ng-false-value="0" ng-true-value="1">
                 </label>
             </div>
-        </h3>
+        </h3> -->
 
         <div class="form-group" ng-repeat="campo in atribuido" ng-if="(atribuido[0].atribuicao === 'Titular') || (titular.Wave === 0 && atribuido[0].atribuicao !== 'Acompanhante') || (titular.Wave === 1 && atribuido[0].atribuicao === 'Acompanhante')">
 
